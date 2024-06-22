@@ -1,0 +1,8 @@
+[package]
+name = "markdown_navigation"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pulldown-cmark = "0.11"
+regex = "1.5"
