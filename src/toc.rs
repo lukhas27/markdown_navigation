@@ -47,7 +47,7 @@ pub fn generate_toc_and_add_anchors(content: &str) -> (String, String) {
             Event::Text(text) => {
                 if let Some(_level) = current_level {
                     if in_heading {
-                        let anchor = format!("<a id=\"{}\"></a>\n", text.to_lowercase().replace(" ", "-"));
+                        let anchor = format!("<a id=\"{}\"></a>\n", text.to_lowercase().replace(' ', "-"));
                         if !text.contains(&anchor) {
                             new_content.push_str(&format!("{} {}", text, anchor));
                         } else {
