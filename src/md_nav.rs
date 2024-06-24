@@ -29,6 +29,7 @@ pub fn update_readme_navigation(dir: &Path) -> Result<()> {
             let new_content =
                 create_new_readme_content(&parent_link, &links_section, &readme_content);
             fs::write(&readme_path, new_content)?;
+            println!("Updated: {}", readme_path.display());
         }
     }
 
@@ -111,6 +112,7 @@ fn update_markdown_file(path: &Path) -> Result<()> {
     if !content.starts_with("[<-](./Readme.md)") {
         content = format!("[<-](./Readme.md)\n\n{}", content);
         fs::write(path, content)?;
+        println!("Updated: {}", path.display());
     }
     Ok(())
 }
