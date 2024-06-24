@@ -18,6 +18,6 @@ sudo mv target/release/mdnav /usr/local/bin/
 
 # Cleanup
 cd ..
-rm -rf yourproject
+rm -rf ndnav
 
 echo "Installation completed! You can now use 'mdnav' command."
