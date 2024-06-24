@@ -2,15 +2,30 @@ use std::{env, path::Path};
 
 mod md_nav;
 
-/// The main function of the program.
-///
-/// It takes a command-line argument specifying the path to a markdown file.
-/// It then calls the `update_readme_navigation` function from the `md_nav` module
-/// to update the navigation in the README file based on the headings in the markdown file.
+const VERSION: &str = env!("CARGO_PKG_VERSION");
+
 fn main() {
     let args: Vec<String> = env::args().collect();
+
+    // Check for help flag
+    if args.contains(&"--help".to_string()) || args.contains(&"-h".to_string()) {
+        println!("mdnav - A tool for navigating through markdown files\n");
+        println!("Usage:");
+        println!("  mdnav <folder_path>      Process the specifed folder and add navigation links to all markdown files");
+        println!("  mdnav --version | -v     Print version information");
+        println!("  mdnav --help | -h        Print this help message");
+        std::process::exit(0);
+    }
+
+    // Check for version flag
+    if args.contains(&"--version".to_string()) || args.contains(&"-v".to_string()) {
+        println!("mdnav version: {}", VERSION);
+        std::process::exit(0);
+    }
+
+    // Existing logic to process markdown file
     if args.len() != 2 {
-        eprintln!("Usage: {} <markdown_file>", args[0]);
+        eprintln!("Usage: mdnav <markdown_file>");
         std::process::exit(1);
     }
 
