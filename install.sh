@@ -7,17 +7,17 @@ if ! command -v cargo &> /dev/null; then
 fi
 
 # Clone the repository
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject || exit
+git clone https://github.com/lukhas27/mdnav.git
+cd mdnav
 
 # Build the project
 cargo build --release
 
 # Move the binary to /usr/local/bin
-sudo mv target/release/yourproject /usr/local/bin/
+sudo mv target/release/mdnav /usr/local/bin/
 
 # Cleanup
 cd ..
 rm -rf yourproject
 
-echo "Installation completed! You can now use 'yourproject' command."
+echo "Installation completed! You can now use 'mdnav' command."
