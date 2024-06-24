@@ -4,16 +4,66 @@ Creates a markdown navigation for all markdown files in passed folder.
 
 **[Example](Example/Readme.md)**
 
-## Usage
+## Installation
+
+### Prerequisites
+
+- [Rust and Cargo](https://www.rust-lang.org/tools/install) must be installed on your system.
+
+### Steps
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/lukhas27/mdnav.git
+   cd mdnav
+   ```
+
+2. Build the project:
+
+   ```sh
+   cargo build --release
+   ```
+
+3. Move the binary to a directory in your PATH, for example `/usr/local/bin`:
+
+   ```sh
+   sudo mv target/release/mdnav /usr/local/bin/
+   ```
+
+4. Verify the installation:
+
+   ```sh
+   mdnav --version
+   ```
+
+## Easy Installation
+
+To install the tool using the provided script, run:
+
+```sh
+curl -sSf https://raw.githubusercontent.com/lukhas27/mdnav/master/install.sh | sh
 ```
 
+### Usage
+
+Run following command:
+
 ```
+mdnav <folder_path>
+```
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Todo's
+
 - [ ] Table of Content Integration
 
-
 ## What it does
+
 1. Read the markdown file.
 2. Read all folders and file that are in the folder with the readme
    1. make link to `/folder/Readme.md` named "folder"
