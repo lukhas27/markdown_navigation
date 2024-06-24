@@ -21,6 +21,6 @@ mv target/release/mdnav ~/.local/bin/
 
 # Cleanup
 cd ..
-rm -rf ndnav
+rm -rf mdnav
 
 echo "Installation completed! You can now use 'mdnav' command."

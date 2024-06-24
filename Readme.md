@@ -45,6 +45,9 @@ To install the tool using the provided script, run:
 curl -sSf https://raw.githubusercontent.com/lukhas27/mdnav/master/install.sh | sh
 ```
 Enure `~/.local/bin/` is added to your path.
+```
+export PATH="$HOME/.local/bin:$PATH"
+```
 
 ### Usage
 
