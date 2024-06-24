@@ -17,7 +17,7 @@ cargo build --release
 mkdir -p ~/.local/bin
 
 # Move the binary to ~/.local/bin/
-sudo mv target/release/mdnav ~/.local/bin/
+mv target/release/mdnav ~/.local/bin/
 
 # Cleanup
 cd ..
