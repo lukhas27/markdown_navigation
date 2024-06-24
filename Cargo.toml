@@ -6,3 +6,4 @@ edition = "2021"
 [dependencies]
 pulldown-cmark = "0.11"
 regex = "1.5"
+tempfile = "3"
