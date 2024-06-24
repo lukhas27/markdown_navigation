@@ -5,10 +5,4 @@
 - [example 4](<example 4.md>)
 - [Page 2 1](<Page 2 1/Readme.md>)
 - [Page 2 2](<Page 2 2/Readme.md>)
-------
-
-asdasdasc
-as
-das
-f
-das
+---
