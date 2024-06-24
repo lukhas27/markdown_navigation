@@ -13,8 +13,11 @@ cd mdnav
 # Build the project
 cargo build --release
 
-# Move the binary to /usr/local/bin
-sudo mv target/release/mdnav /usr/local/bin/
+# Create the bin directory if it doesn't exist
+mkdir -p ~/.local/bin
+
+# Move the binary to ~/.local/bin/
+sudo mv target/release/mdnav ~/.local/bin/
 
 # Cleanup
 cd ..

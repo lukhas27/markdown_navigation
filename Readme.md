@@ -25,10 +25,10 @@ Creates a markdown navigation for all markdown files in passed folder.
    cargo build --release
    ```
 
-3. Move the binary to a directory in your PATH, for example `/usr/local/bin`:
+3. Move the binary to a directory in your PATH, for example `~/.local/bin/`:
 
    ```sh
-   sudo mv target/release/mdnav /usr/local/bin/
+   sudo mv target/release/mdnav ~/.local/bin/
    ```
 
 4. Verify the installation:
@@ -44,6 +44,7 @@ To install the tool using the provided script, run:
 ```sh
 curl -sSf https://raw.githubusercontent.com/lukhas27/mdnav/master/install.sh | sh
 ```
+Enure `~/.local/bin/` is added to your path.
 
 ### Usage
 
